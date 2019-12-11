@@ -29,14 +29,14 @@ def encode_decode_str(your_str):  # Creating md5 hash using hashlib module
     hex_equivalent = result.hexdigest()
     return hex_equivalent
 
-print(84*"#")
+print("####################################################################################")
 print("\n[1] New\n")
 print("\n[2] Key Generator\n")
 print("\n[3] Encrypt a Key [md5]\n")
 print("\n[4] Read Saved Logs\n")
 print("\n[5] Delete all logs\n")
 print("\n[6] Quit\n")
-print(84*"#")
+print("#####################################################################################")
 
 while True:  # Continously prompt for choice
     while True:
@@ -47,49 +47,54 @@ while True:  # Continously prompt for choice
             print("\nOnly Integer Allowed!")
 
     if user_choice==1 or user_choice==0o1:
-        print("\n84*'#'\n")
+        print("\n************************************************************************************\n")
         description = input("\nEnter a Description: ")
         user_name = input("\nEnter Your User ID: ")
         pwd = getpass.getpass("\nEnter your Password: ")
         print(f"\nYour ID is '{user_name}' and password is {len(pwd)} ;)")
         details_to_text()
         print("\nLOG SAVED SUCCESSFULLY!\n")
-        print("\n84*#\n")
+        print("\n*************************************************************************************\n")
+
     elif user_choice == 2 or user_choice == 0o2:
-        print("\n84*'#'\n")
+        print("\n*************************************************************************************\n")
         len_pass = int(input("\nEnter the maximum length of your key: "))
         pass_generator(len_pass)
-        print("\n84*'#'\n")
+        print("\n*************************************************************************************\n")
 
     elif user_choice == 3 or user_choice == 0o3:
-        print("\n84*'#'\n")
+        print("\n*************************************************************************************\n")
         key = input("\nEnter the string to be encrypted: ")
         encode_decode_str(key)
-        print("\n84*'#'\n")
+        print("\n*************************************************************************************\n")
 
     elif user_choice==4 or user_choice==0o4:
-        print("\n84*'#'\n")
+        print("\n*************************************************************************************\n")
         log_pwd = getpass.getpass("Enter Password: " + "\n")
         if log_pwd == var:
             open_logs()
         else:
             print("\nIncorrect!")
-        print("\n84*'#'\n")
+        print("\n*************************************************************************************\n")
 
     elif user_choice == 5 or user_choice ==0o5:
-        print("\n84*'#'\n")
+        print("\n*************************************************************************************\n")
         if os.path.exists("log.txt"):
             os.remove("log.txt")
             print("\nDeleted all saved logs!")
         else:
             print("\nFile does not exist.")
-        print("\n84*'#'\n")
+        print("\n*************************************************************************************\n")
 
     elif user_choice==0o6 or user_choice == 6:
         print("\nVAULT LOCKED!!!\U0001F512\n")
         break
     else:
         print("\nEnter a valid option!!!")
+
+
+
+
 
 
 
