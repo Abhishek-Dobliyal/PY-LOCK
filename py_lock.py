@@ -47,7 +47,7 @@ while True:  # Continously prompt for choice
             print("\nOnly Integer Allowed!")
 
     if user_choice==1 or user_choice==0o1:
-        print("\n84*#\n")
+        print("\n84*'#'\n")
         description = input("\nEnter a Description: ")
         user_name = input("\nEnter Your User ID: ")
         pwd = getpass.getpass("\nEnter your Password: ")
@@ -56,34 +56,34 @@ while True:  # Continously prompt for choice
         print("\nLOG SAVED SUCCESSFULLY!\n")
         print("\n84*#\n")
     elif user_choice == 2 or user_choice == 0o2:
-        print("\n84*#\n")
+        print("\n84*'#'\n")
         len_pass = int(input("\nEnter the maximum length of your key: "))
         pass_generator(len_pass)
-        print("\n84*#\n")
+        print("\n84*'#'\n")
 
     elif user_choice == 3 or user_choice == 0o3:
-        print("\n84*#\n")
+        print("\n84*'#'\n")
         key = input("\nEnter the string to be encrypted: ")
         encode_decode_str(key)
-        print("\n84*#\n")
+        print("\n84*'#'\n")
 
     elif user_choice==4 or user_choice==0o4:
-        print("\n84*#\n")
+        print("\n84*'#'\n")
         log_pwd = getpass.getpass("Enter Password: " + "\n")
         if log_pwd == var:
             open_logs()
         else:
             print("\nIncorrect!")
-        print("\n84*#\n")
+        print("\n84*'#'\n")
 
     elif user_choice == 5 or user_choice ==0o5:
-        print("\n84*#\n")
+        print("\n84*'#'\n")
         if os.path.exists("log.txt"):
             os.remove("log.txt")
             print("\nDeleted all saved logs!")
         else:
             print("\nFile does not exist.")
-        print("\n84*#\n")
+        print("\n84*'#'\n")
 
     elif user_choice==0o6 or user_choice == 6:
         print("\nVAULT LOCKED!!!\U0001F512\n")
